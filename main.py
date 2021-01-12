@@ -25,6 +25,8 @@ while True:
       stick.append(-1*stick.pop())
     elif inpuut[i]=="i":
       stick.append(1/stick.pop())
+    elif inpuut[i]=="sqrt":
+      stick.append(stick.pop()**0.5)
     elif inpuut[i]=="p":
       print(stick)
     elif inpuut[i]=="x":
@@ -32,6 +34,8 @@ while True:
       break
     elif isnumber(inpuut[i]):
       stick.append(float(inpuut[i]))
+    else:
+      print("that input contained the invalid integer or operation {}".format(inpuut[i]))
   if breaker:
     break
   print(stick)
